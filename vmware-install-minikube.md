@@ -5,9 +5,13 @@
 
 环境
 > 宿主机：Win10
+
 > 虚拟机：Ubuntu18.04-x64-desktop
+
 > 虚拟机内存：6G
+
 > 虚拟机存储：40G
+
 > Vmware Workstation 版本：15.5.0
 
 1、安装常用工具
