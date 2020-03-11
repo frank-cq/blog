@@ -27,15 +27,15 @@ sudo apt install -y fish vim openssh-server curl docker.io
 sudo curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
 
-3、启动 minikube，启动时会去拉取镜像，默认是 gcr.io，所以这里最重要的就是换镜像仓库，毕竟现实会教育你什么叫人生苦短，[传送](https://github.com/kubernetes/minikube/issues/4224)
+3、启动 minikube，启动时会去拉取镜像，默认是 gcr.io，所以这里最重要的就是换镜像仓库 [传送](https://github.com/kubernetes/minikube/issues/4224)
 ```bash
 # sudo minikube start --vm-driver=none --image-repository=registry.cn-hangzhou.aliyuncs.com/google_containers --alsologtostderr --v=7
-minikube start --vm-driver=none --image-mirror-country=cn --alsologtostderr --v=7
+sudo minikube start --vm-driver=none --image-mirror-country=cn --alsologtostderr --v=7
 ```
 
 4、安装 kubectl，[传送](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 ```bash
-# 有 google 别怕，大胆地输入执行
+# 大胆地输入执行
 curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.0/bin/linux/amd64/kubectl
 
 chmod +x ./kubectl
